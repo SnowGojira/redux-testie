@@ -2,7 +2,8 @@
 //action = {type:"...",payload:{...}}
 
 let lastId = 0;
-function reducer(state=[], action){
+
+export default function reducer(state=[], action){
     if(action.type === 'bugAdded')
     return [...state,//会有深拷贝的问题，使用immer啥的
     {   
