@@ -8,7 +8,7 @@ export default function reducer(state=[], action){
     return [...state,//会有深拷贝的问题，使用immer啥的
     {   
         id:++lastId,
-        description:action.payload.descripton,
+        description:action.payload.description,
         resolved:false
     }];
     else if(action.type==='bugRemoved')
